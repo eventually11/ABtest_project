@@ -57,3 +57,7 @@ In hypothesis testing, we typically aim to minimize both α and β, but reducing
 Statistical power refers to the probability of correctly rejecting a false null hypothesis (H0). It is calculated as 1−β1−β. High statistical power means that the test is more likely to detect an actual effect when it exists, reducing the chances of Type II errors.
 
 In hypothesis testing, we generally aim to maximize the statistical power by increasing the sample size, reducing random error, or improving the measurement quality.
+
+
+
+# Test process
