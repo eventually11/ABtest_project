@@ -65,6 +65,8 @@ In hypothesis testing, we generally aim to maximize the statistical power by inc
 Objective
 
 To investigate the impact of changing rider clothing color on delivery efficiency.
+
+
 Data Variables
 
     strategy_id: Marketing strategy identifier, representing the different groups in the AB test:
