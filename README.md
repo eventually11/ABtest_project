@@ -61,3 +61,19 @@ In hypothesis testing, we generally aim to maximize the statistical power by inc
 
 
 # Test process
+
+Objective
+
+To investigate the impact of changing rider clothing color on delivery efficiency.
+Data Variables
+
+    strategy_id: Marketing strategy identifier, representing the different groups in the AB test:
+        1: Control group (no change in clothing color)
+        2: Marketing Strategy One (first variation of clothing color)
+        3: Marketing Strategy Two (second variation of clothing color)
+
+    user_id: Unique identifier for each rider.
+
+    label: Indicates whether the rider changed their clothing color:
+        0: Did not change clothing color
+        1: Changed clothing color
