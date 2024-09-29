@@ -79,3 +79,15 @@ Data Variables
     label: Indicates whether the rider changed their clothing color:
         0: Did not change clothing color
         1: Changed clothing color
+
+
+Sample Size Calculator
+
+This code calculates the minimum sample size required for an A/B test, assuming a two-group design (control and treatment). The steps are as follows:
+
+    Effect Size: Set to 0.01, representing the expected difference between the control and treatment groups.
+    Alpha: Set to 0.05, indicating a 5% significance level (confidence level).
+    Power: Set to 0.8, meaning there's an 80% probability of detecting a true effect.
+    Ratio: Set to 1, meaning the sample sizes for the control and treatment groups are equal.
+
+Using these parameters, the TTestIndPower class from the statsmodels library calculates the minimum sample size needed to achieve sufficient statistical power for detecting the given effect size. The result is then rounded up using math.ceil()
