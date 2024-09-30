@@ -60,7 +60,7 @@ In hypothesis testing, we generally aim to maximize the statistical power by inc
 
 
 
-# Test process
+## Test process
 
 Objective
 
@@ -120,12 +120,14 @@ The notebook shows that hypothesis testing (Z-test) was performed for two strate
     Strategy 1 Test Result:
         Z-score: -59.6660
         p-value: 0.0
+        statistical power: 1>0.8
 
     This result suggests that Strategy 1 shows a statistically significant improvement over the control group because the p-value is 0 (less than the significance level of 0.05). The extremely negative Z-score suggests a large deviation between the control and Strategy 1, indicating that Strategy 1 is likely performing better in terms of the measured label.
 
     Strategy 2 Test Result:
         Z-score: -14.3627
         p-value: 4.43e-47
+        statistical power: 1>0.8
 
     Similar to Strategy 1, Strategy 2 also shows a statistically significant improvement over the control group, with an extremely small p-value (much lower than 0.05). The Z-score also shows a significant difference between Strategy 2 and the control group.
 
@@ -137,5 +139,6 @@ Summary:
 
 
 
-# AA test
+## AA test
 The purpose is to verify whether the user segmentation is reasonable. The main goal is to check if the control group and the strategy group exhibit similar conversion rates under identical experimental conditions, without any actual differences. The A/A test uses the same experimental conditions to verify whether there is no statistically significant difference between the two groups. If the conversion rates between the two groups are not significantly different, it indicates that the user segmentation is reasonable.
+
