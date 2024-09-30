@@ -91,3 +91,25 @@ This code calculates the minimum sample size required for an A/B test, assuming 
     Ratio: Set to 1, meaning the sample sizes for the control and treatment groups are equal.
 
 Using these parameters, the TTestIndPower class from the statsmodels library calculates the minimum sample size needed to achieve sufficient statistical power for detecting the given effect size. The result is then rounded up using math.ceil()
+
+
+Conclusion 
+
+The notebook shows that hypothesis testing (Z-test) was performed for two strategies, and here are the key outputs:
+
+    Strategy 1 Test Result:
+        Z-score: -59.6660
+        p-value: 0.0
+
+    This result suggests that Strategy 1 shows a statistically significant improvement over the control group because the p-value is 0 (less than the significance level of 0.05). The extremely negative Z-score suggests a large deviation between the control and Strategy 1, indicating that Strategy 1 is likely performing better in terms of the measured label.
+
+    Strategy 2 Test Result:
+        Z-score: -14.3627
+        p-value: 4.43e-47
+
+    Similar to Strategy 1, Strategy 2 also shows a statistically significant improvement over the control group, with an extremely small p-value (much lower than 0.05). The Z-score also shows a significant difference between Strategy 2 and the control group.
+
+
+    Both Strategy 1 and Strategy 2 have significantly improved the measured outcome (label) compared to the control group, as evidenced by their very small p-values.
+    Strategy 1 has a greater impact based on the Z-score, which is much more extreme than that of Strategy 2.
+
