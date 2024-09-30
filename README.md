@@ -142,3 +142,12 @@ Summary:
 ## AA test
 The purpose is to verify whether the user segmentation is reasonable. The main goal is to check if the control group and the strategy group exhibit similar conversion rates under identical experimental conditions, without any actual differences. The A/A test uses the same experimental conditions to verify whether there is no statistically significant difference between the two groups. If the conversion rates between the two groups are not significantly different, it indicates that the user segmentation is reasonable.
 
+    Total rate: 0.012442544261473528
+    A/A Test - z-score: -2.5418134831300656, p-value: 0.011027900460504928
+    A/A Test rejected the null hypothesis, user segmentation may have issues.
+
+    Total rate A1 vs A3: 0.012392782621291188
+    A/A Test A1 vs A3 - z-score: -2.038684138526655, p-value: 0.0414815617913717
+    A/A Test A1 vs A3 rejected the null hypothesis, user segmentation may have issues.
+
+Based on the A/A test results, we suspect that the user segmentation may not be entirely reasonable, as the tests have indicated potential significant differences between the randomly assigned groups. Further analysis is needed to better understand and address the segmentation issues.
