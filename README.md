@@ -135,3 +135,7 @@ Summary:
     Both Strategy 1 and Strategy 2 have significantly improved the measured outcome (label) compared to the control group, as evidenced by their very small p-values.
     Strategy 1 has a greater impact based on the Z-score, which is much more extreme than that of Strategy 2.
 
+
+
+# AA test
+The purpose is to verify whether the user segmentation is reasonable. The main goal is to check if the control group and the strategy group exhibit similar conversion rates under identical experimental conditions, without any actual differences. The A/A test uses the same experimental conditions to verify whether there is no statistically significant difference between the two groups. If the conversion rates between the two groups are not significantly different, it indicates that the user segmentation is reasonable.
