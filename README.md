@@ -93,7 +93,27 @@ This code calculates the minimum sample size required for an A/B test, assuming 
 Using these parameters, the TTestIndPower class from the statsmodels library calculates the minimum sample size needed to achieve sufficient statistical power for detecting the given effect size. The result is then rounded up using math.ceil()
 
 
-Conclusion 
+Conclusion :
+
+We can observe that both Strategy 1 and Strategy 2 have shown varying degrees of improvement in achieve rates compared to the control group. Specifically:
+
+    Strategy 1 increased the achieve rate by 0.2 percentage points.
+    Strategy 2 saw a larger improvement, increasing the achieve rate by 1.3 percentage points.
+
+To confirm if these improvements are statistically significant, we performed hypothesis testing for both strategies. The details of the hypothesis test for Strategy 2 are as follows:
+a. Null Hypothesis and Alternative Hypothesis
+
+Let p1​ be the achieve rate for the control group and p2p be the achieve rate for Strategy 2. The hypotheses are formulated as:
+
+    Null Hypothesis (H₀): p1≥p2 (No significant improvement in achieve rate for Strategy 2)
+    Alternative Hypothesis (H₁): p1<p2​ (significant)
+
+b. Distribution Type, Test Type, and Significance Level
+
+    The samples are assumed to follow a binomial distribution as the event is binary (achieved or not achieved).
+    This is a two-sample Z-test for proportions because the samples are independent and both sample sizes n>30.
+    Since the population mean and standard deviation are unknown, we use the Z-test to compare the click rates between the two groups.
+    The significance level αα is set to 0.05.
 
 The notebook shows that hypothesis testing (Z-test) was performed for two strategies, and here are the key outputs:
 
@@ -109,6 +129,8 @@ The notebook shows that hypothesis testing (Z-test) was performed for two strate
 
     Similar to Strategy 1, Strategy 2 also shows a statistically significant improvement over the control group, with an extremely small p-value (much lower than 0.05). The Z-score also shows a significant difference between Strategy 2 and the control group.
 
+
+Summary: 
 
     Both Strategy 1 and Strategy 2 have significantly improved the measured outcome (label) compared to the control group, as evidenced by their very small p-values.
     Strategy 1 has a greater impact based on the Z-score, which is much more extreme than that of Strategy 2.
