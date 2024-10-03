@@ -1,5 +1,3 @@
-# ABtest_project
-
 ## AB Test Project Background
 
 In this project, we aim to evaluate the effectiveness of changes made to a specific feature in an online product through an A/B testing approach. The purpose of this test is to determine whether the new version of the feature (Version B) performs better than the current version (Version A) based on key metrics such as user engagement and conversion rates.
@@ -151,3 +149,35 @@ The purpose is to verify whether the user segmentation is reasonable. The main g
     A/A Test A1 vs A3 rejected the null hypothesis, user segmentation may have issues.
 
 Based on the A/A test results, we suspect that the user segmentation may not be entirely reasonable, as the tests have indicated potential significant differences between the randomly assigned groups. Further analysis is needed to better understand and address the segmentation issues.
+
+
+## PSM
+
+When an A/A test reveals significant differences between groups (p-value < 0.05), it indicates that randomization did not result in balanced groups. In such cases, Propensity Score Matching (PSM) is a useful statistical method to address these differences. PSM can help reduce group imbalances and ensure that the treatment and control groups are more comparable.
+
+
+Why Use PSM?
+
+The purpose of an A/A test is to verify the effectiveness of randomization. If significant differences are found between groups, it suggests that the randomization process may have failed or certain confounding variables have not been adequately controlled.
+
+PSM helps reduce group differences by matching treatment and control group members based on their propensity scores. The propensity score is the probability of a user being in the treatment group based on observed characteristics, such as age, income, gender, or other factors.
+Advantages of PSM:
+
+    Control Confounding Variables: PSM allows us to control for confounding variables by matching users with similar characteristics from the treatment and control groups, ensuring the groups are balanced.
+    Remediation for Non-Randomized Experiments: When randomization does not fully eliminate differences between groups, PSM can be used as a remedial method to achieve better comparability between the groups.
+
+
+Steps to Apply PSM When A/A Test Fails
+1. Identify Confounding Variables
+
+The first step is to identify key confounding variables (e.g., age, income, gender, or other relevant features) that could explain the differences between groups.
+2. Estimate Propensity Scores
+
+Using a logistic regression model, propensity scores can be estimated based on these identified variables. The propensity score represents the probability that a user would be in the treatment group, given their observed characteristics.
+3. Match Treatment and Control Groups
+
+Using the propensity scores, we can match each treatment group member with one or more control group members who have similar scores. Techniques like nearest-neighbor matching can be used to perform this matching.
+4. Analyze the Matched Data
+
+After matching, the treatment and control groups should be more balanced in terms of the confounding variables. The effect of the treatment can then be evaluated by analyzing the matched data.
+。
