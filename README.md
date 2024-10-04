@@ -181,3 +181,34 @@ Using the propensity scores, we can match each treatment group member with one o
 
 After matching, the treatment and control groups should be more balanced in terms of the confounding variables. The effect of the treatment can then be evaluated by analyzing the matched data.
 。
+
+
+Conduct A/A Test After PSM
+
+Objective: Validate that the propensity score matching was successful and that the test and control groups are equivalent.
+Action:
+    Randomly divide the population into two groups (A1 and A2), both receiving the same treatment.
+    Measure key performance metrics (e.g., click-through rate, conversion rate).
+    Perform an independent t-test to compare the means of the two groups.
+Hypothesis:
+    Null hypothesis H0H0​: There is no significant difference between the two groups (A1 and A2).
+    Alternative hypothesis H1H1​: There is a significant difference between the two groups.
+
+
+
+Conduct A/B Test to Evaluate Experimental Effect
+
+Objective: Measure the effect of the experimental change on a key performance metric by comparing the test group (B) with the control group (A).
+Action:
+    Assign users to Group A (control) and Group B (treatment) based on the PSM process.
+    Apply the experimental condition to Group B (e.g., a new algorithm, design, or marketing strategy) and leave Group A unchanged.
+    Collect performance data for both groups (e.g., click-through rates, conversion rates).
+Hypothesis:
+    Null hypothesis H0H0​: There is no significant difference between Group A and Group B.
+    Alternative hypothesis H1H1​: There is a significant difference between Group A and Group B.
+
+
+Evaluate Results and Draw Conclusions
+
+    If the p-value in the A/B test is significant, it suggests that the experimental condition applied to Group B has a meaningful effect on the chosen metrics (e.g., conversion rates, engagement).
+    If the p-value is not significant, it indicates that there is no statistical evidence to support that the experimental condition has an effect, and further investigation or adjustment of the experiment may be required.
